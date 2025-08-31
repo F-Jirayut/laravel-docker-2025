@@ -13,6 +13,7 @@ services:
             - '${APP_PORT:-80}:80'
             - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
         environment:
+            TZ: Asia/Bangkok
             WWWUSER: '${WWWUSER:-1000}'
             LARAVEL_SAIL: 1
             XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
@@ -32,6 +33,7 @@ services:
         ports:
             - '${FORWARD_DB_PORT:-3306}:3306'
         environment:
+            TZ: Asia/Bangkok
             MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
             MYSQL_ROOT_HOST: '%'
             MYSQL_DATABASE: '${DB_DATABASE}'
